@@ -55,8 +55,9 @@ GameObject:
   - component: {fileID: 4411711470664666}
   - component: {fileID: 95709609971427354}
   - component: {fileID: 54358270063086696}
-  - component: {fileID: 114115469585642770}
-  - component: {fileID: 114109535979844680}
+  - component: {fileID: 114798920110379658}
+  - component: {fileID: 114053089819792602}
+  - component: {fileID: 114759349612520668}
   m_Layer: 0
   m_Name: LightTankBasic
   m_TagString: Untagged
@@ -114,9 +115,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 2996e44a13ff1714c89a7095299324d8, type: 2}
   - {fileID: 2100000, guid: 0baf0aeeb2d952c45bfacd5646cdcde6, type: 2}
@@ -130,6 +133,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -147,9 +151,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0baf0aeeb2d952c45bfacd5646cdcde6, type: 2}
   - {fileID: 2100000, guid: 2996e44a13ff1714c89a7095299324d8, type: 2}
@@ -164,6 +170,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -218,7 +225,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114109535979844680
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114053089819792602
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -226,10 +234,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640916627703458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b059ebf818fff3946af161d0a940e73e, type: 3}
+  m_Script: {fileID: 11500000, guid: ebf9e706e34ff164f9e7495013d91545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114115469585642770
+--- !u!114 &114759349612520668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640916627703458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3908f71045532b5498cc07ca4a1474e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightColor: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
+  original: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
+  tile: {fileID: 23822271760623162, guid: 005345df77c3f474f89dd419c5d4af47, type: 2}
+--- !u!114 &114798920110379658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -237,7 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640916627703458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081b79d8be99b8e4fa18d68f91501d16, type: 3}
+  m_Script: {fileID: 11500000, guid: c6c8e8753a85ff84c8cc6e15ff360eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tank: {fileID: 11400000, guid: c96581641f2612b4a98b015d76f7c2cf, type: 2}

@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 33754126095769810}
   - component: {fileID: 23822271760623162}
   - component: {fileID: 95701764386480710}
-  - component: {fileID: 114506586842236992}
+  - component: {fileID: 76325811277659178}
+  - component: {fileID: 114029756103701974}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -52,9 +53,11 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
   m_StaticBatchInfo:
@@ -67,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -82,6 +86,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730077939748278}
   m_Mesh: {fileID: 4300000, guid: 07eaaca61cebd8d4e87d9f5d1a2b975b, type: 3}
+--- !u!76 &76325811277659178
+WorldParticleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730077939748278}
+  m_BounceFactor: 0.5
+  m_CollisionEnergyLoss: 0
+  m_CollidesWith:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SendCollisionMessage: 0
+  m_MinKillVelocity: 0
 --- !u!95 &95701764386480710
 Animator:
   serializedVersion: 3
@@ -99,14 +116,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114506586842236992
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114029756103701974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730077939748278}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78070403fc93e834894f2917ba487cfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3908f71045532b5498cc07ca4a1474e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlightColor: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
+  original: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
+  tile: {fileID: 23822271760623162}
