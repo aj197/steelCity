@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TankDisplayScript : MonoBehaviour {
 
+    //displays the information created in the 'TankObject' scriptable object script
     public Tank tank;
 
-    // Use this for initialization
+    
     void Start () {
 		
 	}

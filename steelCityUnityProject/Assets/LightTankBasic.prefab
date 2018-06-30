@@ -57,7 +57,8 @@ GameObject:
   - component: {fileID: 54358270063086696}
   - component: {fileID: 114798920110379658}
   - component: {fileID: 114053089819792602}
-  - component: {fileID: 114759349612520668}
+  - component: {fileID: 114708737163349712}
+  - component: {fileID: 65610460520997990}
   m_Layer: 0
   m_Name: LightTankBasic
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640916627703458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6, y: -0.03, z: -53.3}
+  m_LocalPosition: {x: 0, y: 36.97729, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4253185522210074}
@@ -208,6 +209,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65610460520997990
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640916627703458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.788944, y: 2.021752, z: 4.328865}
+  m_Center: {x: 0, y: 1, z: -0.8}
 --- !u!95 &95709609971427354
 Animator:
   serializedVersion: 3
@@ -237,20 +250,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf9e706e34ff164f9e7495013d91545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114759349612520668
+  tank: {fileID: 1640916627703458}
+--- !u!114 &114708737163349712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1640916627703458}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3908f71045532b5498cc07ca4a1474e4, type: 3}
+  m_Script: {fileID: 11500000, guid: a31de0eb77a25ab4b9d7280529b12763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightColor: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
-  original: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
-  tile: {fileID: 23822271760623162, guid: 005345df77c3f474f89dd419c5d4af47, type: 2}
+  tankToMove: {fileID: 1640916627703458}
 --- !u!114 &114798920110379658
 MonoBehaviour:
   m_ObjectHideFlags: 1

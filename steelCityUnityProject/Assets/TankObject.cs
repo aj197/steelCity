@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
     [CreateAssetMenu(fileName = "New Tank", menuName = "Tanks/Light")]
     public class Tank : ScriptableObject
     {
-
+        //holds all the info needed for each tank
         public string tankType;
         public int health;
 

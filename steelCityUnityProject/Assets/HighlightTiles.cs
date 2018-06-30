@@ -16,15 +16,19 @@ public class HighlightTiles : MonoBehaviour {
         TankClickEvent.TankClicked -= Highlight;
     }
 
-    public Material highlightColor;
-    public Material original;
+    public Material highlightMat;
+    public Material originalMat;
     public Renderer tile;
+    public GameObject gridSpace;
+
+    TankClickEvent tankToMove;
     
     void Highlight() //method doing the work
     {
         if (true)
         {
-            tile.material = highlightColor;
+            tile.material = highlightMat;
+            //tankToMove.
         }
        
     }
@@ -33,7 +37,7 @@ public class HighlightTiles : MonoBehaviour {
     {
         if (Input.GetMouseButtonUp(1))
         {
-            tile.material = original;
+            tile.material = originalMat;
         }
     }
 }
