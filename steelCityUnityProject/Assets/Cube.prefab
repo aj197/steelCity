@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33754126095769810}
   - component: {fileID: 23822271760623162}
   - component: {fileID: 95701764386480710}
-  - component: {fileID: 76325811277659178}
   - component: {fileID: 114029756103701974}
   m_Layer: 0
   m_Name: Cube
@@ -86,19 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730077939748278}
   m_Mesh: {fileID: 4300000, guid: 07eaaca61cebd8d4e87d9f5d1a2b975b, type: 3}
---- !u!76 &76325811277659178
-WorldParticleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1730077939748278}
-  m_BounceFactor: 0.5
-  m_CollisionEnergyLoss: 0
-  m_CollidesWith:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_SendCollisionMessage: 0
-  m_MinKillVelocity: 0
 --- !u!95 &95701764386480710
 Animator:
   serializedVersion: 3
