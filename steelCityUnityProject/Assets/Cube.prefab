@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3908f71045532b5498cc07ca4a1474e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightMat: {fileID: 0}
-  originalMat: {fileID: 0}
+  highlightMat: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
+  originalMat: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
   tile: {fileID: 23822271760623162}
   gridSpace: {fileID: 1730077939748278}

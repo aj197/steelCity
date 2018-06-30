@@ -19,16 +19,13 @@ public class HighlightTiles : MonoBehaviour {
     public Material highlightMat;
     public Material originalMat;
     public Renderer tile;
-    public GameObject gridSpace;
-
-    TankClickEvent tankToMove;
+    public GameObject gridSpace; //not sure if I need this
     
     void Highlight() //method doing the work
     {
         if (true)
         {
             tile.material = highlightMat;
-            //tankToMove.
         }
        
     }

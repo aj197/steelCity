@@ -8,7 +8,6 @@ public class TankClickEvent : MonoBehaviour {
 
     public delegate void clickTask();
     public static event clickTask TankClicked;
-    public GameObject tank;
 
     private void OnMouseDown()
     {

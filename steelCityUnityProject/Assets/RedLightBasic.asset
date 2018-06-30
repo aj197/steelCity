@@ -8,26 +8,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: RedLight1
-  m_EditorClassIdentifier: Assembly-CSharp::Tank
-  tankType: 
-  health: 0
-  frontHullArmor: 0
-  leftHullArmor: 0
-  rightHullArmor: 0
+  m_Script: {fileID: 11500000, guid: 9278b09d767865f45939b87fd8568e1f, type: 3}
+  m_Name: RedLightBasic
+  m_EditorClassIdentifier: 
+  tankType: light
+  health: 10
+  frontHullArmor: 3
+  leftHullArmor: 1
+  rightHullArmor: 1
   rearHullArmor: 0
   frontHullERA: 0
   leftHullERA: 0
   rightHullERA: 0
-  frontTurretArmor: 0
-  leftTurretArmor: 0
-  rightTurretArmor: 0
+  frontTurretArmor: 2
+  leftTurretArmor: 1
+  rightTurretArmor: 1
   rearTurretArmor: 0
   frontTurretERA: 0
   leftTurretERA: 0
   rightTurretERA: 0
-  ability1: 0
-  ability2: 0
-  ability3: 0
-  maxMovement: 0
+  ability1: smoke
+  ability2: fuel
+  ability3: radar
+  maxMovement: 8

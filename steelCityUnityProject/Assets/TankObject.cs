@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-    [CreateAssetMenu(fileName = "New Tank", menuName = "Tanks/Light")]
-    public class Tank : ScriptableObject
+    [CreateAssetMenu(fileName = "New Tank", menuName = "Tanks/Tank")]
+    public class TankObject : ScriptableObject
     {
         //holds all the info needed for each tank
         public string tankType;
@@ -28,11 +28,18 @@ using UnityEngine;
         public int leftTurretERA;
         public int rightTurretERA;
 
-        public int ability1;
-        public int ability2;
-        public int ability3;
+        public string ability1;
+        public string ability2;
+        public string ability3;
 
         public int maxMovement;
 
-    
+        //can write methods in this script that can be called by TankDisplay
+
+        public void printHealth()
+        {
+        Debug.Log(health + " HP");
+        }
+
+        
     }
