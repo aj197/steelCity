@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankType: light
   health: 10
+  ghost: {fileID: 1126862772485570, guid: e5b032ac2a14c0a4c8e7bff323ad97f5, type: 2}
   frontHullArmor: 3
   leftHullArmor: 1
   rightHullArmor: 1

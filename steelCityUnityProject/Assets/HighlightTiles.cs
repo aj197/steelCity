@@ -16,24 +16,17 @@ public class HighlightTiles : MonoBehaviour {
         TankClickEvent.TankClicked -= Highlight;
     }
 
-
-
     public Material highlightMat;
     public Material originalMat;
     public Renderer tile;
-    public GameObject gridSpace; //not sure if I need this
-    public Vector3 Tank;
+    
     
     void Highlight() //method doing the work
     {
         //TankObject tank;
-        
-
-
-        if (true)
-        {
+            //Debug.Log(tank);
             tile.material = highlightMat;
-        }
+        
        
     }
 

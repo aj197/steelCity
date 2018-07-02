@@ -56,11 +56,11 @@ GameObject:
   - component: {fileID: 95709609971427354}
   - component: {fileID: 54358270063086696}
   - component: {fileID: 114798920110379658}
-  - component: {fileID: 114053089819792602}
   - component: {fileID: 65610460520997990}
+  - component: {fileID: 114529164418024014}
   m_Layer: 0
   m_Name: LightTankBasic
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114053089819792602
+--- !u!114 &114529164418024014
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -246,10 +246,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1640916627703458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf9e706e34ff164f9e7495013d91545, type: 3}
+  m_Script: {fileID: 11500000, guid: 0804fad6b89ee214eac09c4243a3bec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tank: {fileID: 1640916627703458}
+  tank: {fileID: 11400000, guid: 6703c8e9c37596a4db2b504455d0cbd0, type: 2}
+  ghost: {fileID: 1126862772485570, guid: e5b032ac2a14c0a4c8e7bff323ad97f5, type: 2}
 --- !u!114 &114798920110379658
 MonoBehaviour:
   m_ObjectHideFlags: 1

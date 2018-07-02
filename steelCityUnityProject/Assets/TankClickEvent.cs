@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+    //OLD CLASS
 public class TankClickEvent : MonoBehaviour {
 
     //activates the event 'TankClicked' when a tank gameobject is clicked. 
@@ -12,31 +13,34 @@ public class TankClickEvent : MonoBehaviour {
 
     //some raycast stuff i was fiddling round with
 
-    //void update()
-    //{
-       // if (Input.GetMouseButtonDown(0))
-        //{
-          //  Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-           // RaycastHit hit;
+    void update()
+    {
 
-            //if(Physics.Raycast( ray, out hit))
-            //{
-               // Debug.Log("Hit");
-            //}
-       // }
-   // }
-
-
-
-    private void OnMouseDown(){
-
-        Debug.Log("Clcik");
-
-        if (TankClicked != null)
+    if (Input.GetMouseButtonDown(0))
         {
-            //HighlightTiles.Tank = 
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+        
+        
+        if(Physics.Raycast(ray, out hit))
+            {
+            Debug.Log("Hit");
             TankClicked();
+            }
         }
     }
+
+
+
+    /*   private void OnMouseDown(){
+
+           Debug.Log("Click");
+
+           if (TankClicked != null)
+           {    
+               TankClicked();
+           }
+       } */
 
 }

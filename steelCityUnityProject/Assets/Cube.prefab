@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 23822271760623162}
   - component: {fileID: 95701764386480710}
   - component: {fileID: 114029756103701974}
-  m_Layer: 0
+  - component: {fileID: 65418344133902026}
+  m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +86,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1730077939748278}
   m_Mesh: {fileID: 4300000, guid: 07eaaca61cebd8d4e87d9f5d1a2b975b, type: 3}
+--- !u!65 &65418344133902026
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730077939748278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12500001, y: 0.12500001, z: 0.125593}
+  m_Center: {x: 0, y: 0, z: 0.0627965}
 --- !u!95 &95701764386480710
 Animator:
   serializedVersion: 3
@@ -117,4 +130,3 @@ MonoBehaviour:
   highlightMat: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
   originalMat: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
   tile: {fileID: 23822271760623162}
-  gridSpace: {fileID: 1730077939748278}
