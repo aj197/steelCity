@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tile
   - Tank
+  - Immobile
   layers:
   - Default
   - TransparentFX
