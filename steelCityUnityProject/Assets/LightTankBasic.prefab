@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 54358270063086696}
   - component: {fileID: 65610460520997990}
   - component: {fileID: 114529164418024014}
+  - component: {fileID: 114918054804617964}
   m_Layer: 9
   m_Name: LightTankBasic
   m_TagString: Tank
@@ -249,3 +250,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tank: {fileID: 11400000, guid: 6703c8e9c37596a4db2b504455d0cbd0, type: 2}
+--- !u!114 &114918054804617964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1640916627703458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 107
+    i1: 85
+    i2: 229
+    i3: 248
+    i4: 195
+    i5: 24
+    i6: 23
+    i7: 180
+    i8: 169
+    i9: 137
+    i10: 96
+    i11: 194
+    i12: 207
+    i13: 38
+    i14: 32
+    i15: 86
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
