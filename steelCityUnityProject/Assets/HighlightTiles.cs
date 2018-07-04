@@ -6,22 +6,12 @@ public class HighlightTiles : MonoBehaviour {
 
     //highlights game tiles when a tank is clicked that that tank can move to
 
-    private void OnEnable() //subscribes event
-    {
-        TankClickEvent.TankClicked += Highlight;
-    }
-
-    private void OnDisable() //unsubscribes event
-    {
-        TankClickEvent.TankClicked -= Highlight;
-    }
-
     public Material highlightMat;
     public Material originalMat;
     public Renderer tile;
     
     
-    void Highlight() //method doing the work
+    public void Highlight() //method doing the work
     {
         //TankObject tank;
             //Debug.Log(tank);
