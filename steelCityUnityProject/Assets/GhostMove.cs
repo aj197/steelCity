@@ -8,42 +8,53 @@ public class GhostMove : MonoBehaviour {
     private int distanceLimit;
     private Vector3 tankPos = new Vector3();
     private bool isImmobile = false;
+    private ArrayList tileList = new ArrayList();
+    public GameObject tile;
+
+    public static float tileDistance;
 
     public void move(int max, Vector3 tankPosition)
     {
         distanceLimit = max;
         tankPos = tankPosition;
     }
-
-   
-    void OnTriggerEnter(Collider other)
+  
+    void OnTriggerExit(Collider other)
     {
-        Debug.Log("yo");
-        if(other.gameObject.tag == "Immobile")
+        if (other.gameObject.tag == "Tile")
         {
-            Debug.Log("immobile!");
-            isImmobile = true;
+            tileList.Add(other.gameObject);                      
         }
-    } 
+        if (other.gameObject.layer == LayerMask.NameToLayer("Immobile"))
+        {
+            isImmobile = true;   
+        }
+    }
 
+    private void Start()
+    {
+        tileDistance = tile.GetComponent<BoxCollider>().size.x;
+        Debug.Log(tileDistance);
+    }
 
-
-    void Start() {
-       
+    void highlightTileList()
+    {
+        foreach (GameObject tile in tileList)
+        {
+            tile.GetComponent<HighlightTiles>().Highlight();
+        }
     }
     
     void Update()
     {  //for some reason 7 is a good constant of proportionality for the distance limit
-        if(!isImmobile && (distance < (7*distanceLimit))) //dont forget to add in immpassable colliders to this statement!
+        if(!isImmobile && (distance < (tileDistance*distanceLimit)))
         {
             distance = Vector3.Distance(tankPos, transform.position);
-            transform.position += transform.forward * 10f * Time.deltaTime; //moves ghost tank
-            //should also call highlight here
-
-            
+            transform.position += transform.forward * 100f * Time.deltaTime; //moves ghost tank  
         }
         else
         {
+            highlightTileList();
             Destroy(this.gameObject);
         }
     }

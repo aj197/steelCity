@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126862772485570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -124,3 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ffc2e3cea3da1409b92ea5d0b5ea7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 1730077939748278, guid: 005345df77c3f474f89dd419c5d4af47, type: 2}

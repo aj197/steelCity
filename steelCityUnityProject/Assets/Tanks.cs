@@ -29,12 +29,12 @@ public class Tanks : MonoBehaviour {
             if (Physics.Raycast(ray, out hit) && hit.transform == this.transform) //checks for hitting tank
             {
                 //activcate move sequence-gen ghost, move maxdistance
-                GameObject ghostTank = Instantiate(tank.ghost, transform.position, transform.rotation) as GameObject;
+                GameObject ghostTank = Instantiate(tank.ghost, transform.position + Vector3.forward * GhostMove.tileDistance, transform.rotation) as GameObject;
 
                 ghostTank.GetComponent<GhostMove>().move(tank.maxDistance, transform.position); //creates ghost tank object in game at position of the tank its clicked on
             }                            
         }
-        //should raycast check for tiles:
+       //should raycast check for tiles:
        // if(Physics.Raycast(ray, out hit, Mathf.Infinity, tile))
        
     }
