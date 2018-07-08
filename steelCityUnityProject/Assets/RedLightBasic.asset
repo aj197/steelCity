@@ -31,4 +31,4 @@ MonoBehaviour:
   ability1: smoke
   ability2: fuel
   ability3: radar
-  maxDistance: 8
+  maxDistance: 9

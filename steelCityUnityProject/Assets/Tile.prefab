@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65390262713152560}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,4 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightMat: {fileID: 2100000, guid: aab7171dfc2ab5f4cb720f71101174bd, type: 2}
   originalMat: {fileID: 2100000, guid: c79a0c440eb9ef94ab6db10c83b2a7fa, type: 2}
-  tile: {fileID: 0}
+  tileRenderer: {fileID: 23786803187962590}
