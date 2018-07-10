@@ -39,13 +39,51 @@ public class Tanks : MonoBehaviour
         StateManager.isMovingTank = false;
     }
 
+    void TurnTank(Transform tile)
+    {
+        this.transform.rotation = Quaternion.LookRotation(tile.position - this.transform.position, Vector3.up);
+    }
+
     void TurnActionSequence()
     {
+        StateManager.isMovingTank = false;
+
+        if (Input.GetMouseButtonDown(0) && StateManager.isTurningTank == false)
+        {
+            if (Physics.Raycast(ray, out hit) && hit.transform == this.transform) //checks for hitting tank
+            {
+                StateManager.isTurningTank = true;
+                StateManager.currentTank = this;
+                
+                GameObject ghostTankForward = Instantiate(tank.ghost, transform.position + Vector3.forward * GameManager.tileDistance, Quaternion.LookRotation(Vector3.forward, Vector3.up)) as GameObject;
+                GameObject ghostTankRight = Instantiate(tank.ghost, transform.position + Vector3.right * GameManager.tileDistance, Quaternion.LookRotation(Vector3.right, Vector3.up)) as GameObject;
+                GameObject ghostTankLeft = Instantiate(tank.ghost, transform.position + Vector3.left * GameManager.tileDistance, Quaternion.LookRotation(Vector3.left, Vector3.up)) as GameObject;
+                GameObject ghostTankBack = Instantiate(tank.ghost, transform.position + Vector3.back * GameManager.tileDistance, Quaternion.LookRotation(Vector3.back, Vector3.up)) as GameObject;
+
+                ghostTankForward.GetComponent<GhostMove>().SetMoveParameters(2, transform.position); 
+                ghostTankRight.GetComponent<GhostMove>().SetMoveParameters(2, transform.position);
+                ghostTankLeft.GetComponent<GhostMove>().SetMoveParameters(2, transform.position);
+                ghostTankBack.GetComponent<GhostMove>().SetMoveParameters(2, transform.position);
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0) && StateManager.isTurningTank == true)
+        {
+            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Tile")
+            {
+                if (hit.transform.gameObject.GetComponent<Tile>().isHighlighted == true && StateManager.currentTank == this)
+                {
+                    TurnTank(hit.transform);
+                }
+            }
+        }
 
     }
 
     void MoveActionSequence()
     {
+        StateManager.isTurningTank = false;
+
         if (Input.GetMouseButtonDown(0) && StateManager.isMovingTank == false)
         {
             Debug.Log("click");
@@ -60,7 +98,7 @@ public class Tanks : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && StateManager.isMovingTank == true)
+        if (Input.GetMouseButtonUp(0) && StateManager.isMovingTank == true)
         {
             if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Tile")
             {

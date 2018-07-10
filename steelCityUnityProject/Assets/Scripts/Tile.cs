@@ -8,9 +8,13 @@ public class Tile : MonoBehaviour {
 
     public Material highlightMat;
     public Material originalMat;
+    public Material mouseHoverMat;
     public Renderer tileRenderer;
     public bool isHighlighted = false;
     public static List<GameObject> mapTiles;
+
+    RaycastHit hit;
+    Ray ray;
 
     public void Highlight() //method doing the work
     {
@@ -36,7 +40,25 @@ public class Tile : MonoBehaviour {
 
     void Update() //checks if rmb is pressed to deselect tank
     {
-        if (StateManager.isMovingTank == false)
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (isHighlighted)
+        {
+            if(Physics.Raycast(ray, out hit) && hit.transform == this.transform)
+            {
+                tileRenderer.material = mouseHoverMat;
+            }
+            else
+            {
+                tileRenderer.material = highlightMat;
+            }
+        }
+        else
+        {
+            tileRenderer.material = originalMat;
+        }
+
+        if (StateManager.isMovingTank == false && StateManager.isTurningTank == false)
         {
             tileRenderer.material = originalMat;
             isHighlighted = false;

@@ -6,6 +6,7 @@ public class StateManager : MonoBehaviour {
 
 
     public static bool isMovingTank = false; //true if you have selected a tank and have highlighted potential tiles to move to
+    public static bool isTurningTank = false;
     public static Tanks currentTank;  //the tank that is currently selected
     public static string currentAction; //the action that you want the selected tank to perform
 
@@ -14,6 +15,7 @@ public class StateManager : MonoBehaviour {
         if (Input.GetMouseButtonUp(1))
         {
             isMovingTank = false;
+            isTurningTank = false;
         }
 
 
