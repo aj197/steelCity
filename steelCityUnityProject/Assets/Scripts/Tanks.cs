@@ -42,6 +42,7 @@ public class Tanks : MonoBehaviour
     void TurnTank(Transform tile)
     {
         this.transform.rotation = Quaternion.LookRotation(tile.position - this.transform.position, Vector3.up);
+        StateManager.isTurningTank = false;
     }
 
     void TurnActionSequence()
@@ -93,7 +94,7 @@ public class Tanks : MonoBehaviour
                 StateManager.currentTank = this;
 
                 //activcate move sequence-gen ghost, move maxdistance
-                GameObject ghostTank = Instantiate(tank.ghost, transform.position + Vector3.forward * GameManager.tileDistance, transform.rotation) as GameObject;
+                GameObject ghostTank = Instantiate(tank.ghost, transform.position + transform.forward * GameManager.tileDistance, transform.rotation) as GameObject;
                 ghostTank.GetComponent<GhostMove>().SetMoveParameters(tank.maxDistance, transform.position); //creates ghost tank object in game at position of the tank its clicked on
             }
         }
