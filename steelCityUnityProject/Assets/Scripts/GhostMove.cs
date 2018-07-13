@@ -49,7 +49,7 @@ public class GhostMove : MonoBehaviour {
         if(!isImmobile && (distance < (GameManager.tileDistance * distanceLimit)))
         {
             distance = Vector3.Distance(tankPos, transform.position);
-            transform.position += transform.forward * 50f * Time.deltaTime; //moves ghost tank  
+            transform.position += transform.forward * 100f * Time.deltaTime; //moves ghost tank  
         }
         else
         {
