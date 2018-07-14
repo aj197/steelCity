@@ -10,6 +10,7 @@ public class GhostMove : MonoBehaviour {
     private bool isImmobile = false;
     private ArrayList tileList = new ArrayList();
     public GameObject tile;
+    public static bool isRunning;
 
 
     public void SetMoveParameters(int max, Vector3 tankPosition)
@@ -33,7 +34,7 @@ public class GhostMove : MonoBehaviour {
 
     private void Start()
     {
-
+        isRunning = true;
     }
 
     void HighlightTileList()
@@ -45,8 +46,8 @@ public class GhostMove : MonoBehaviour {
     }
     
     void Update()
-    {  //for some reason 7 is a good constant of proportionality for the distance limit
-        if(!isImmobile && (distance < (GameManager.tileDistance * distanceLimit)))
+    {
+        if(isRunning && !isImmobile && (distance < (GameManager.tileDistance * distanceLimit)))
         {
             distance = Vector3.Distance(tankPos, transform.position);
             transform.position += transform.forward * 100f * Time.deltaTime; //moves ghost tank  

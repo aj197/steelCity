@@ -22,6 +22,12 @@ public class Tile : MonoBehaviour {
         isHighlighted = true;
     }
 
+    public void UnHighlight()
+    {
+        tileRenderer.material = originalMat;
+        isHighlighted = false;
+    }
+
     void OnEnable()
     {
         if(mapTiles == null)
@@ -58,10 +64,5 @@ public class Tile : MonoBehaviour {
             tileRenderer.material = originalMat;
         }
 
-        if (StateManager.isMovingTank == false && StateManager.isTurningTank == false)
-        {
-            tileRenderer.material = originalMat;
-            isHighlighted = false;
-        }
     }
 }

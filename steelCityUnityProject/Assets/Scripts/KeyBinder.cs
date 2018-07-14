@@ -42,13 +42,12 @@ public class KeyBinder : MonoBehaviour {
         // when the apropriate key is pressed, the keyBinder changes the state in the stateManager
         if (Input.GetKeyDown(actionsKeys[move]))
         {
-            Debug.Log("Ready to select tank to move");
-            StateManager.currentAction = move;
+            StateManager.SetCurrentAction(move);
         }
 
         if (Input.GetKeyDown(actionsKeys[turn]))
         {
-            StateManager.currentAction = turn;
+            StateManager.SetCurrentAction(turn);
         }
 
         if(StateManager.currentAction == move)
